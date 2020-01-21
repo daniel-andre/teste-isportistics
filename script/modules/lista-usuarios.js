@@ -1,5 +1,8 @@
-export default function listaUsuarios(){
+export default function listaUsuarios(atualizacao = "list"){
   const tbodyTable = document.querySelector(".table tbody");
+  if(atualizacao === "update"){
+    tbodyTable.innerHTML = '';
+  }
   fetch("backend/lista_usuario.php")
     .then(response => response.json())
       .then(body => {

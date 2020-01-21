@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>iSPORTiSTiCS</title>
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="jumbotron jumbotron-fluid header">
     <div class="container">
-      <form action="backend/formulario.php" method="post">
+      <form method="post" id="form">
         <div class="form-row">
           <div class="col">
-            <input type="text" class="form-control nome" name="nome" placeholder="Informe seu nome" required>
+            <input type="text" id="nome" class="form-control nome" name="nome" placeholder="Informe seu nome" required>
           </div>
           <div class="col">
-            <input type="text" class="form-control sobrenome" name="sobrenome" placeholder="Informe seu sobrenome" required>
+            <input type="text" id="sobrenome" class="form-control sobrenome" name="sobrenome" placeholder="Informe seu sobrenome" required>
           </div>
           <div class="col">
-            <input type="number" class="form-control participacao" name="participacao" placeholder="Participação" min="0" max="100" required>
+            <input type="number" id="participacao" class="form-control participacao" name="participacao" placeholder="Participação" min="0" max="100" required>
           </div>
           <div class="col">
             <button type="submit" class="btn btn-block submit-button">Send</button>
@@ -47,7 +47,6 @@
             </tr>
           </thead>
           <tbody>
-            <?php //require_once 'lista_usuario.php'; ?>
           </tbody>
         </table>
       </div>
