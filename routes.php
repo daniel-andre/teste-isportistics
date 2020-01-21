@@ -4,14 +4,14 @@ require "./vendor/autoload.php";
 
 use Pecee\SimpleRouter\SimpleRouter as Router;
 
-Router::get('teste/usuario', function() {
+Router::get('teste-isportistics/usuario', function() {
     require_once 'backend/api.php';
     $API = new API;
     header("Content-Type: application/json");
     echo $API->Select($conn);
 });
 
-Router::post('/teste/usuario', function() {
+Router::post('/teste-isportistics/criarUsuario', function() {
   $body = file_get_contents('php://input');
   $obj = json_decode($body);
 
@@ -20,7 +20,7 @@ Router::post('/teste/usuario', function() {
   echo $API->Insert($conn, $obj);
 });
 
-Router::get('/teste', function() {
+Router::get('/teste-isportistics', function() {
     require_once 'index.php';
 });
 
