@@ -12,7 +12,7 @@ export default function formulario(){
     const sobrenome = document.getElementById("sobrenome").value;
     const participacao = document.getElementById("participacao").value;
 
-    fetch('http://localhost:80/teste/criarUsuario', {
+    fetch('http://localhost:80/teste-isportistics/criarUsuario', {
       method: 'POST',
       mode: "same-origin",
       credentials: "same-origin",
